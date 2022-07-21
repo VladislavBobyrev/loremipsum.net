@@ -25,6 +25,7 @@ form {
     font-size: 0.9375rem;
     text-transform: uppercase;
     font-family: "Lato";
+    padding: 0.9377rem 0.625rem;
 
     &:hover {
       cursor: pointer;
@@ -52,12 +53,16 @@ form {
     padding: 0.75rem 0.625rem;
     font-size: 1.125rem;
     font-family: "Lato";
+    color: #272733;
   }
-
+  input[name="email"]::placeholder,
+  input[name="name"]::placeholder {
+    color: #272733;
+  }
   select {
     border: 1px solid #ffffff;
     border-radius: 3px;
-    padding: 0.75rem 0.625rem;
+    padding: 0.713rem 0.625rem;
     font-size: 1.125rem;
     font-family: "Lato";
 
@@ -74,7 +79,7 @@ div.custom-file {
   display: flex;
   justify-content: center;
   gap: 0.625rem;
-  color: $color-basic;
+  padding: 0.782rem 0.625rem;
   font-size: 0.9375rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -160,6 +165,9 @@ input[type="range"]::-moz-range-thumb {
   .progress-custom {
     grid-column: 1/2;
     grid-row: 0;
+  }
+  form .custom-submit {
+    max-width: 315px;
   }
 }
 @media (max-width: 460px) {
