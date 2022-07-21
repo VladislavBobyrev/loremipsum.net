@@ -1,0 +1,41 @@
+@mixin webkit-scrollbar($color, $background: transparent, $size: 7px) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+    background: none;
+    size: $size;
+    height: $size;
+
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $background;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 3px;
+    &:hover { background-color: $color; }
+  }
+  &::-webkit-resizer {
+    display: none;
+    background: none;
+    size: $size;
+    height: $size;
+  }
+}
+
+*{
+ @include webkit-scrollbar($bg-accent);
+}
+
+@media (max-width: 62em) {
+  *{
+    @include webkit-scrollbar($bg-accent, transparent, 0);
+   }
+}

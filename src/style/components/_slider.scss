@@ -1,0 +1,65 @@
+.swiper-wrapper {
+  display: inline-flex;
+  color: $color-secondary;
+  min-width: 0;
+}
+
+.swiper-slide {
+  display: flex;
+  gap: 1.25rem;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 198px;
+  min-width: 0;
+}
+
+.dats-group {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: calc(100% - 150px);
+  z-index: -1;
+  overflow: hidden;
+  min-width: 0;
+
+  .dats {
+    display: flex;
+    gap: 78px;
+  }
+  // украшение точками
+  span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c4c4c4;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #c4c4c4;
+    }
+
+    &::after {
+      position: absolute;
+      left: 26px;
+    }
+    &::before {
+      position: absolute;
+      right: 26px;
+    }
+  }
+}
+
+.icon-svg {
+  background: #3e9cdc;
+  border: 5px solid #286690;
+  border-radius: 50%;
+  width: 6.25rem;
+  height: 6.25rem;
+}

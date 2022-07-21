@@ -1,0 +1,72 @@
+html {
+  overflow: hidden;
+  // Оптимизация для мобильных устройств
+  display: flex;
+  min-height: -webkit-fill-available;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato";
+  line-height: 1.2;
+  color: $color-secondary;
+  background: $bg-basic;
+  overflow-y: scroll;
+}
+
+.container {
+  // максимальная шарина контейнера + отступ безопасности
+  max-width: calc(1172px + 1rem);
+  width: 100%;
+  // отступ безопасности
+  padding: 0 0.5rem;
+  margin: 0 auto;
+}
+
+.color-accent {
+  color: $color-accent;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    // отступ безопасности
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 768px) {
+  html{
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 460px) {
+  html{
+    font-size: 0.75rem;
+  }
+}

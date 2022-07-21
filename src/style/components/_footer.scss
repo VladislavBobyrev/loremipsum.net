@@ -1,0 +1,39 @@
+footer {
+  font-size: 0.8125rem;
+  padding: 1.875rem;
+  background: #3d4050;
+
+  .container {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+}
+.footer-group {
+  display: flex;
+  gap: 2.5rem;
+}
+.footer-group--divider {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+}
+.footer-icon,
+.footer-link {
+  gap: 0.625rem;
+}
+
+.footer-icon {
+  color: #c3c3c3;
+}
+
+@media (max-width: 1200px) {
+  footer .container {
+    gap: 1rem;
+    justify-content: center;    
+  }
+}
